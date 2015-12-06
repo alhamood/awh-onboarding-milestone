@@ -56,7 +56,7 @@ def show_plot():
   month = int(today_list[0])-1
   if month == 0:
     month = 12
-    year -= year
+    year -= 1
   start_date=(str(year) + '-' + str(month) + '-' + today_list[1])	
   url = "https://www.quandl.com/api/v3/datasets/WIKI/" + ticker + ".json?start_date=" + start_date
   r = requests.get(url)
